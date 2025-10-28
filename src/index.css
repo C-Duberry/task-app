@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin: 0 auto;
+  min-width: 340px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,185 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*App title given a blue background and text
+set to white. The border at the bottom is dotted 
+to mimic notepad paper. Padding added to top and 
+bottom.*/
+
+h1{
+  background-color:#3b94b8;;
+  border-bottom: 3px dotted white;
+  color: white;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*The container for the to do list. The 
+width is set to 800px with a minimum value 
+of 330px. The background colour is white. An auto
+margin to center the container. A dotted border added to the bottom
+to mimic a notepad - a slight box shadow added. */
+
+.todo-container{
+  width: 800px ;
+  min-width: 330px;
+  background-color: white;
+ display: block;
+ margin: auto;
+ border-bottom: 3px dotted #122038;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 4px; 
+}
+
+/*Styling for the input box. Margin right to separate
+it from the button. Height of 25px for stylistic reasons.*/
+
+.update-input{
+  margin-right: 15px;
+  height: 25px;
+  padding-left: 8px;
+}
+
+/*List item given a dashed top and bottom border
+to divide each task. */
+
+li{
+  border-top: 1px dashed  rgb(77, 77, 77);
+  border-bottom: 1px dashed  rgb(73, 73, 73);
+  padding:10px;
+}
+
+/*Default list style changed to display no bullets
+and no padding. Text aligned left.*/
+
+ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+}
+
+/*Styling for the text portion of the list. The width 
+was set to 555px, the word-wrap was set to break-word if
+the entry is longer than its container. Font-size set to 
+1.4rem.*/
+
+span.task{
+width: 555px;
+word-wrap: break-word;
+font-size: 1.4rem;
+}
+
+/*The list items include the to dos and the buttons. Set to 
+display flex. */
+
+.list-items{
+  display: flex;
+
+}
+
+/*Global button styles
+
+Cursor set to pointer, a slight box shadow and border
+radius added. Colour set to white and font size set
+larger. */
+
+button{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 4px; 
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  font-size: larger;
+}
+
+/*Button styling*/
+
+/*Container that contains the edit and delete button. 
+Set to display flex and float right.*/
+
+.edit-delete{
+  display: flex;
+  float: right;
+  
+}
+
+/*Styling for the delete button. Background colour 
+set to a reddish-orange, max-height set to 36px. */
+
+.delete-btn{
+  margin-right: 10px;
+  border: 0px;
+  max-height: 36px;
+  background-color: #f94f4f;
+}
+
+/*Styling for the edit button. Background colour 
+set to a bright blue, max-height set to 36px. */
+
+.edit-btn{
+  margin-right: 10px;
+  border: 0px;
+  background-color: #40bef0;
+  max-height: 36px;
+}
+
+/*Styling for add new and update button. Background
+colour set to blue and height set as 31px.*/
+
+.add-btn{
+  height: 31px;
+  background-color: #3b94b8;;
+}
+
+/*Bottom margin given to add new button.*/
+
+.add-new{
+  margin-bottom: 20px;
+}
+
+/*Styling for the checkbox. Floating right to 
+align with the edit and delete buttons. Height and
+width increased to make the checkbox larger. */
+
+input[type="checkbox" i]{
+  float: right;
+    height: 30px;
+    width: 40px;
+}
+
+/*At a max width of 840px,
+
+the app container is given a width of 80% so it can
+be scaled responsively. */
+
+/*The span.task (content) is given a width of 100% so it can 
+be scaled and margin added to*/ 
+
+/*The content and buttons box container change flex-direction to column so the
+content is stacked above the buttons. */
+
+/*Edit and delete button container given a width of 100% and top
+and bottom margin.*/
+
+@media screen and (max-width: 840px) {
+  .todo-container {
+    width: 80%;
+  }
+ 
+  span.task {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .list-items {
+    flex-direction: column;
+  }
+
+  .edit-delete {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+

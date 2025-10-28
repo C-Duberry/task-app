@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import NewEntry from './components/NewEntry';
+import DisplayTodos from './components/DisplayTodos';
+
+/*Compulsory Task 2
+
+This is a to do app using React and Redux Toolkit.
+The app allows the user to enter a new task, edit and update 
+an existing task and delete a task should they choose to do so.*/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <div className='todo-container'>
+      < NewEntry />
+      < DisplayTodos />
+      </div>
+      </main>
     </div>
   );
 }
